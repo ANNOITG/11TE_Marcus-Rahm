@@ -15,7 +15,7 @@ namespace School_Work4
             Console.ReadKey();
         }
     }
-    class Person
+    class Person //Lägg alla andra klasser i varsin fil. Person i Person.cs etc...
     {
         private string name;
         private string pnr;
