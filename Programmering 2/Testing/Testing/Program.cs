@@ -10,7 +10,7 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-            public string TestThatShit
+            string TestThatShit;
         }
     }
 }
