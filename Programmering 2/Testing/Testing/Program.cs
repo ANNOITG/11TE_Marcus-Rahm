@@ -11,6 +11,7 @@ namespace Testing
         static void Main(string[] args)
         {
             string TestThatShit;
+            string yousuck;
         }
     }
 }
