@@ -10,61 +10,10 @@ namespace School_Work4
     {
         static void Main(string[] args)
         {
-            Person p = new Person();
-            student s = new student();
+            student shitlord = new student("adfgaga", "adfgaga", "adfgaga", "adfgaga", "adfgaga");
+            course a = new course();
+            Console.WriteLine(shitlord.getname());
             Console.ReadKey();
         }
-    }
-    class Person //Lägg alla andra klasser i varsin fil. Person i Person.cs etc...
-    {
-        private string name;
-        private string pnr;
-        private string telenr;
-        private string adress;
-
-        public string getname() { return name; }
-        public void setName(string name) { this.name = name; }
-
-        public string getPnr() { return pnr; }
-        public void setPnr(string personalNumber) { this.pnr = personalNumber; }
-
-        public string getTeleNr() { return telenr; }
-        public void setTeleNr(string telenr) { this.telenr = telenr; }
-
-        public string getAdress() { return adress; }
-        public void setAdress(string Adress) { this.adress = Adress; }
-    }
-    class student : Person
-    {
-        public student()
-        {
-
-        }
-        public student(string name, string pnr, string telenr, string adress)
-        {
-            setName(name);
-            setPnr(pnr);
-            setTeleNr(telenr);
-            setAdress(adress);
-        }
-        
-    }
-    class teacher : Person
-    {
-        public teacher()
-        {
-
-        }
-        public teacher(string name, string pnr, string telenr, string adress)
-        {
-            setName(name);
-            setPnr(pnr);
-            setTeleNr(telenr);
-            setAdress(adress);
-        }
-    }
-    class Class
-    {
-       
     }
 }
