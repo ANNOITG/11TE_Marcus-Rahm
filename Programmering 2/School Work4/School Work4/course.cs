@@ -19,10 +19,14 @@ namespace School_Work4
         {
             Student.Add(student);
         }
-        public void gradesByTeacher(student student, teacher teacher, string grade, string Course)
+        public void gradesByTeacher(student student, teacher teacher, string grade, Grades Course)
         {
-            int name = (student.grades.Count() + 1);
-            List<string> name.ToString();
+            Course = new Grades();
+            Course.setGrades(grade);
+            Course.setTeacher(teacher.getname());
+            Course.setStudent(student.getname());
+            student.grades.Add(Course);
+   
         }
     }
 }

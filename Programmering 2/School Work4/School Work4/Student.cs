@@ -8,8 +8,10 @@ namespace School_Work4
 {
     class student : Person
     {
-        public List<List<string>> grades = new List<List<string>>();
+        public List<Grades> grades = new List<Grades>();
         private string Class;
+        public string getClass() { return Class; }
+        public void setClass(string Class) { this.Class = Class; }
         public student()
         {
 
