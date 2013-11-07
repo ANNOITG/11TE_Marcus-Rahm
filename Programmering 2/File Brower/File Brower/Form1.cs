@@ -18,5 +18,10 @@ namespace File_Brower
             InitializeComponent();
             Directory.
         }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            treeView1.node
+        }
     }
 }
