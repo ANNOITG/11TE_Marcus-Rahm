@@ -9,31 +9,31 @@ namespace McvMusicStore.Controllers
 {
     public class StoreController : Controller
     {
+        MusicStoreEntities storeDB = new MusicStoreEntities();
         //
         // GET: /Store/
 
         public ActionResult Index()
         {
-            var genres = new List<Genre>
-            {
-                new Genre{ name = "Disco"},
-                new Genre{ name = "Jazz"},
-                new Genre{ name = "Rock"}
-            };
+            var genres = storeDB.Genres.ToList();
+            
             return View(genres);
         }
 
         // GET: /Store/Browse
         public ActionResult Browse(string genre)
         {
-            var genreModel = new Genre { name = genre };
+            var genreModel = storeDB.Genres.Include("Albums")
+                .Single(g => g.Name == genre);
+
             return View(genreModel);
         }
 
         // GET: /Store/Details
         public ActionResult Details(int id)
         {
-            var album = new Album { Title = "Album" + id };
+            var album = storeDB.Albums.Find(id);
+
             return View(album);
         }
 
