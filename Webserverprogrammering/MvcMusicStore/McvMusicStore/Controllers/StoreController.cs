@@ -20,6 +20,15 @@ namespace McvMusicStore.Controllers
             return View(genres);
         }
 
+        //
+        // GET: /Store/GenreMenu
+        [ChildActionOnly]
+        public ActionResult GenreMenu()
+        {
+            var genres = storeDB.Genres.ToList();
+            return PartialView(genres);
+        }
+
         // GET: /Store/Browse
         public ActionResult Browse(string genre)
         {

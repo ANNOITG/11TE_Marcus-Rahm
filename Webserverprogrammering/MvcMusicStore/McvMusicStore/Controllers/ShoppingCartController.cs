@@ -24,6 +24,16 @@ namespace MvcMusicStore.Controllers
             return View(viewModel);
         }
         //
+        // GET: /ShoppingCart/CartSummary
+        [ChildActionOnly]
+        public ActionResult CartSummary()
+        {
+            var cart = ShoppingCart.GetCart(this.HttpContext);
+
+            ViewData["CartCount"] = cart.GetCount();
+            return PartialView("CartSummary");
+        }
+        //
         // GET: /Store/AddToCart/5
         public ActionResult AddToCart(int id)
         {
@@ -66,15 +76,6 @@ namespace MvcMusicStore.Controllers
             };
             return Json(results);
         }
-        //
-        // GET: /ShoppingCart/CartSummary
-        [ChildActionOnly]
-        public ActionResult CartSummary()
-        {
-            var cart = ShoppingCart.GetCart(this.HttpContext);
-
-            ViewData["CartCount"] = cart.GetCount();
-            return PartialView("CartSummary");
-        }
+        
     }
 }
