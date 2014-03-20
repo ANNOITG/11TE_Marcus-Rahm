@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Forum.Models.Category>
+
+@{
+    ViewBag.Title = "Topics";
+}
+
+<h2>Category: @Model</h2>
+<ul>
+    @foreach (var i in Model)
+    {
+        foreach (var a in i.topic)
+        {
+            <li>@a.topicName</li>
+        }
+    }
+</ul>
