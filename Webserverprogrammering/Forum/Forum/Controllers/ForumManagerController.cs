@@ -35,6 +35,8 @@ namespace Forum.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(db.Categorys, "id", "name");
+            ViewBag.TopicId = new SelectList(db.Topics, "id", "topicName");
             return View();
         }
 

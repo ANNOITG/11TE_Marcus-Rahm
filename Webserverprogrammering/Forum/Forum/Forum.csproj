@@ -111,6 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ForumController.cs" />
+    <Compile Include="Controllers\ForumManagerController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Forum\Topics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ForumManager\Create.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

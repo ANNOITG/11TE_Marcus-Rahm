@@ -15,13 +15,13 @@ namespace Forum.Controllers
 
         public ActionResult Index()
         {
-            var category = forumDB.categorys.ToList();
+            var category = forumDB.Categorys.ToList();
             return View(category);
         }
 
         public ActionResult Topics(string category)
         {
-            var TopicModel = forumDB.categorys.Include("topic")
+            var TopicModel = forumDB.Categorys.Include("topic")
                 .Single(g => g.name == category);
             return View(TopicModel);
         }
