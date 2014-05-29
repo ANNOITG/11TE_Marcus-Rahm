@@ -1,0 +1,13 @@
+﻿@model IEnumerable<TheForum.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categorys</h2>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.name, "Topics", new { category = category })</li>
+    }
+</ul>

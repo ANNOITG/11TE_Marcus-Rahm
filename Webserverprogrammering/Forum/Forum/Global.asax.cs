@@ -14,6 +14,7 @@ namespace Forum
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new Forum.Models.SampleData());
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

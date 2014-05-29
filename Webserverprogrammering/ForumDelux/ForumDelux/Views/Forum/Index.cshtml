@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ForumDelux.Models.Category>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+    @foreach (var c in Model)
+    {
+        <li><a href="/Forum/Category?category=@c.Name">@c.Name</a></li>
+        var currentTime = new DateTime();
+        try
+        {
+            var t = c.Topics.OrderBy(x => Math.Abs((x.Created - currentTime).Seconds)).First();
+        <li>@t.Name</li>
+        }
+        catch { }
+            
+    }
+</ul>
+

@@ -17,7 +17,7 @@ namespace Forum.Controllers
 
         public ActionResult Index()
         {
-            var category = db.Categorys.Include(i => i.topic);
+            var category = db.Categorys;
             return View(category.ToList());
         }
 

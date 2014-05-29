@@ -9,6 +9,5 @@ namespace Forum.Models
     {
         public int id { get; set; }
         public string content { get; set; }
-        public Topic topic { get; set; }
     }
 }

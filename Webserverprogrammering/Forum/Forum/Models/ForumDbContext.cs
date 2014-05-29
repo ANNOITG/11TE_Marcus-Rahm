@@ -8,8 +8,10 @@ namespace Forum.Models
 {
     public class ForumDbContext : DbContext
     {
+        //public DbSet<SampleData> sampleData { get; set; }
         public DbSet<Category> Categorys { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<TopicComment> TopicComments { get; set; }
+
     }
 }

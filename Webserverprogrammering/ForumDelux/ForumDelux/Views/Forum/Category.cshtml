@@ -1,0 +1,14 @@
+﻿@model ForumDelux.Models.Category
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category</h2>
+    <a href="/Topic/Create">Create topic</a>
+    <ul>
+        @foreach (var topic in Model.Topics)
+        {
+            <li><a href="/Forum/Topic?topic=@topic.Name">@topic.Name</a></li>
+        }
+    </ul>

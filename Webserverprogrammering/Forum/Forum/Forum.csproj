@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ForumDbContext.cs" />
+    <Compile Include="Models\SampleData.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Models\TopicComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
